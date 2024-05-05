@@ -25,11 +25,10 @@ export default function Home() {
 
         {/*  Site header */}
         <Header />
-
+        <Hero />
         {/*  Page content */}
-        <main className="flex-grow max-w-6xl mx-auto ">
+        <main className="flex-grow max-w-6xl mx-auto border-r border-l">
           {/* border-l border-r */}
-          <Hero />
 
           <FeaturesCards />
           <SectionOne />

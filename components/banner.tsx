@@ -18,10 +18,8 @@ function Banner() {
   return (
     <div
       className={cn(
-        "fixed z-50 w-full flex flex-row items-center justify-center bg-[#171717] text-white h-9 py-2 space-x-3 text-sm transition-all duration-200 ease-in-out",
-        !top
-          ? "opacity-0 pointer-events-none"
-          : "backdrop-blur-md border-b mt-0"
+        "fixed z-50 w-full flex flex-row items-center justify-center bg-[#171717] text-white h-9 py-2 space-x-3 text-sm transition-all duration-100 ease-in-out",
+        !top && "opacity-0 pointer-events-none"
       )}
       style={{
         maxHeight: !top ? "0px" : "36px", // Adjust height as needed

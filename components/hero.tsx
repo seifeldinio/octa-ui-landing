@@ -19,10 +19,10 @@ function Hero() {
   return (
     <Section
       // className="pt-[12rem] "
-      className="pt-[9rem] "
+      className="pt-[9rem]"
       // -mt-[5.25rem]
-      crosses
-      crossesOffset="lg:translate-y-[5.25rem]"
+      // crosses
+      // crossesOffset="lg:translate-y-[5.25rem]"
       customPaddings
       id="hero"
     >
@@ -51,7 +51,6 @@ function Hero() {
           >
             Make beautiful websites regardless <br /> of your design experience.
           </h1>
-
           <span className="inline-block relative text-[#2F2F2F] mb-6">
             Beautiful, fast and modern React UI library.
           </span>
@@ -128,7 +127,14 @@ function Hero() {
             </div>
           </ScrollParallax>
         </div>
+        {/* Plus Cross */}
+        <img
+          src="/svg/plus.svg"
+          alt="Plus"
+          className="absolute h-5 w-auto top-[-10px] left-[-10px] z-10"
+        />
       </div>
+
       {/* </div> */}
     </Section>
   );
