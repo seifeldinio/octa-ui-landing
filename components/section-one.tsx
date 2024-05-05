@@ -22,7 +22,7 @@ const SectionOne = () => {
             With beautiful out of the box components.
           </p>
           {/* Code */}
-          <div className="bg-white rounded-xl shadow-sm border border-[#E9E9E9] w-full h-[370px]">
+          <div className="bg-white rounded-xl shadow-sm border border-[#E9E9E9] w-full h-[400px]">
             <div className="bg-[#FAFAFA] w-full rounded-tr-xl rounded-tl-xl px-4 py-4">
               <div className="flex flex-row items-center space-x-2">
                 <div className="bg-red-500 rounded-full h-2.5 w-2.5" />
@@ -33,8 +33,12 @@ const SectionOne = () => {
             {/* Content */}
             <div className="relative p-4">
               {/* <code>const greeting = "Hello, world!";</code> */}
-              <Button className="absolute right-10 top-10" size={"icon"} variant={'outline'}>
-                <Copy className="h-4 w-4"/>
+              <Button
+                className="absolute right-8 top-10"
+                size={"icon"}
+                variant={"outline"}
+              >
+                <Copy className="h-4 w-4" />
               </Button>
               <CodeSnippet />
             </div>
@@ -42,7 +46,7 @@ const SectionOne = () => {
         </div>
         {/* Right */}
         <div className="ml-10">
-          <div className="bg-white rounded-xl shadow-lg border border-[#E9E9E9] h-[460px] w-[400px] p-4">
+          <div className="bg-white rounded-xl shadow-lg border border-[#E9E9E9] h-[490px] w-[400px] p-4">
             Example
           </div>
         </div>

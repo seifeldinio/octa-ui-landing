@@ -30,7 +30,7 @@ export default Card;
   }, []);
 
   return (
-    <pre className="w-[700px] h-[290px] bg-white rounded-xl">
+    <pre className="w-[700px] h-[320px] bg-white rounded-xl">
       <code className="language-javascript">{code}</code>
     </pre>
   );
