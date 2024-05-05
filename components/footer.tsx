@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
 
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-white border-t">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -12,7 +15,7 @@ const Footer: React.FC = () => {
                 className="h-8 me-3"
                 alt="Octa UI"
               />
-              <span className="text-[#666666] text-sm">© 2024</span>
+              <span className="text-[#666666] text-sm">© {currentYear}</span>
             </div>
 
             <div className="flex flex-row items-center space-x-2">
