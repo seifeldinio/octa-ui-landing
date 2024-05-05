@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { octaButtonVariants } from "@/lib/octa-button-variants";
 import { Check, Plus } from "lucide-react"; // Import the Check icon
 import { useState } from "react";
+import BrandedButton from "@/components/ui/branded-button";
 
 const SectionTwo = () => {
   const [selectedVariant, setSelectedVariant] = useState(
@@ -36,7 +37,7 @@ const SectionTwo = () => {
             Select a variant to switch.{" "}
           </p>
           {/* Options to switch the variant */}
-          <div className="grid grid-cols-3 gap-7 mb-12">
+          <div className="grid grid-cols-3 gap-7 mb-10">
             {octaButtonVariants.map((item, i) => (
               <Button
                 key={i}
@@ -58,14 +59,7 @@ const SectionTwo = () => {
               <span>More</span>
             </div>
           </div>
-          <Button className="rounded-full" size={"lg"}>
-            <img
-              src="/logo/logo-light.webp"
-              className="h-5 w-auto mr-2"
-              alt="Logo"
-            />
-            <span>Get Started</span>
-          </Button>
+          <BrandedButton />
         </div>
       </div>
 

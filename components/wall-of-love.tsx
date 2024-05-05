@@ -1,6 +1,7 @@
 "use client";
 import Slider from "react-slick";
-import TestimonialCard from "./ui/testimonial-card";
+import TestimonialCard from "@/components/ui/testimonial-card";
+import BrandedButton from "@/components/ui/branded-button";
 
 const WallOfLove = () => {
   const settings = getSliderSettings(8000);
@@ -9,7 +10,7 @@ const WallOfLove = () => {
   return (
     <section className="relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-20">
+        <div className="py-12 md:pt-20">
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <div className="flex flex-row items-center justify-center content-center">
               <h2 className="font-bold text-4xl tracking-tighter mb-4">
@@ -150,6 +151,9 @@ const WallOfLove = () => {
             // data-aos-delay="300"
             loading="lazy"
           /> */}
+        </div>
+        <div className="flex w-full items-center justify-center mb-20">
+          <BrandedButton />
         </div>
       </div>
     </section>
