@@ -24,7 +24,7 @@ const SectionTwo = () => {
       customPaddings
       id="section-two"
     >
-      <div className="flex flex-row items-start w-full px-7">
+      <div className="flex flex-row items-start w-full px-7 ">
         <div className="flex items-center justify-center bg-gradient-to-tr from-[#FF71DF] to-[#F74D7A] w-[660px] rounded-2xl h-[350px]">
           {/* Rendering the selected variant component */}
           {selectedVariantObject && selectedVariantObject.component}
