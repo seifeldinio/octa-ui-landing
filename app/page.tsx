@@ -9,6 +9,7 @@ const FeaturesCards = dynamic(() => import("@/components/features-cards"));
 const SectionOne = dynamic(() => import("@/components/section-one"));
 const SectionTwo = dynamic(() => import("@/components/section-two"));
 const SectionThree = dynamic(() => import("@/components/section-three"));
+const SectionFour = dynamic(() => import("@/components/section-four"));
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
           <SectionOne />
           <SectionTwo />
           <SectionThree />
+          <SectionFour />
           {/* <Hero /> */}
           {/* <Hero /> */}
           {/*  Page sections */}

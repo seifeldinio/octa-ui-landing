@@ -39,7 +39,7 @@ const SectionThree = () => {
           <ProductCard />
         </div>
       </div>
-      <Separator className=" mb-12" />
+      <Separator />
     </Section>
   );
 };
