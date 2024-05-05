@@ -25,7 +25,8 @@ function Header() {
       <header
         className={cn(
           "fixed w-full z-30 bg-opacity-80 transition duration-300 ease-in-out mt-9",
-          !top && "backdrop-blur-md border-b mt-0"
+          !top && "backdrop-blur-md shadow-sm mt-0"
+          //  border-b
         )}
       >
         <div className="max-w-6xl mx-auto px-5 sm:px-6">

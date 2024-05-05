@@ -1,7 +1,6 @@
 import Banner from "@/components/banner";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-
 import "@seifeldinio/octa-ui/dist/style.css";
 import dynamic from "next/dynamic";
 import Head from "next/head";
@@ -9,6 +8,7 @@ import Head from "next/head";
 const FeaturesCards = dynamic(() => import("@/components/features-cards"));
 const SectionOne = dynamic(() => import("@/components/section-one"));
 const SectionTwo = dynamic(() => import("@/components/section-two"));
+const SectionThree = dynamic(() => import("@/components/section-three"));
 
 export default function Home() {
   return (
@@ -31,6 +31,7 @@ export default function Home() {
           <FeaturesCards />
           <SectionOne />
           <SectionTwo />
+          <SectionThree />
           {/* <Hero /> */}
           {/* <Hero /> */}
           {/*  Page sections */}
