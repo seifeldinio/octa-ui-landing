@@ -11,6 +11,7 @@ const SectionTwo = dynamic(() => import("@/components/section-two"));
 const SectionThree = dynamic(() => import("@/components/section-three"));
 const SectionFour = dynamic(() => import("@/components/section-four"));
 const WallOfLove = dynamic(() => import("@/components/wall-of-love"));
+const Footer = dynamic(() => import("@/components/footer"));
 
 export default function Home() {
   return (
@@ -55,7 +56,7 @@ export default function Home() {
         </main>
 
         {/*  Site footer */}
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );
