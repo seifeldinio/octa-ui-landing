@@ -10,6 +10,7 @@ const SectionOne = dynamic(() => import("@/components/section-one"));
 const SectionTwo = dynamic(() => import("@/components/section-two"));
 const SectionThree = dynamic(() => import("@/components/section-three"));
 const SectionFour = dynamic(() => import("@/components/section-four"));
+const WallOfLove = dynamic(() => import("@/components/wall-of-love"));
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
           <SectionTwo />
           <SectionThree />
           <SectionFour />
+          <WallOfLove />
           {/* <Hero /> */}
           {/* <Hero /> */}
           {/*  Page sections */}

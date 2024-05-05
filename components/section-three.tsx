@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 
 const SectionThree = () => {
   return (
-    <Section className="mt-[-3rem] " customPaddings id="section-one">
+    <Section className="mt-[-3rem] " customPaddings id="section-three">
       <div className="flex flex-row items-end w-full px-7 py-20 bg-white">
         {/* Left */}
         <div className="flex flex-col items-start mr-auto">

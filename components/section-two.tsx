@@ -21,7 +21,7 @@ const SectionTwo = () => {
     <Section
       //   className="mt-[-3rem] "
       customPaddings
-      id="section-one"
+      id="section-two"
     >
       <div className="flex flex-row items-start w-full px-7">
         <div className="flex items-center justify-center bg-gradient-to-tr from-[#FF71DF] to-[#F74D7A] w-[660px] rounded-2xl h-[350px]">
