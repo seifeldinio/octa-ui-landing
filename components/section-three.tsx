@@ -2,6 +2,7 @@ import React from "react";
 import Section from "@/components/ui/section";
 import TechCard from "@/components/ui/tech-card";
 import ProductCard from "@/components/ui/product-card";
+import { Separator } from "@/components/ui/separator";
 
 const SectionThree = () => {
   return (
@@ -38,7 +39,7 @@ const SectionThree = () => {
           <ProductCard />
         </div>
       </div>
-      <div className="h-[500px]"></div>
+      <Separator className=" mb-12" />
     </Section>
   );
 };
