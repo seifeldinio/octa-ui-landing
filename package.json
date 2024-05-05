@@ -23,6 +23,7 @@
     "react-dom": "^18",
     "react-just-parallax": "^3.1.16",
     "react-slick": "^0.30.2",
+    "react-tilt": "^1.0.2",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
   },
