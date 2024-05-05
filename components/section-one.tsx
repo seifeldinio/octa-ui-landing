@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/button";
 import CodeSnippet from "@/components/ui/code-snippet";
 import Section from "@/components/ui/section";
-import { Copy } from "lucide-react";
-
-import FormExample from "./ui/form-example";
+import FormExample from "@/components/ui/form-example";
+import { Separator } from "@/components/ui/separator";
 
 const SectionOne = () => {
   return (
@@ -42,7 +40,7 @@ const SectionOne = () => {
           <FormExample />
         </div>
       </div>
-      <div className="h-[400px]"></div>
+      <Separator className="mt-12 mb-12" />
     </Section>
   );
 };
