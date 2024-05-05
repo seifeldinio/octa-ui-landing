@@ -1,3 +1,4 @@
+/* Gradient for the hero section */
 .hero-gradient {
   -webkit-backdrop-filter: blur(40px) brightness(100%);
   backdrop-filter: blur(40px) brightness(100%);
@@ -14,4 +15,22 @@
   /* mix-blend-mode: hard-light; */
   /* Other properties */
   filter: blur(60px); /* Add blur effect */
+}
+
+/* Gradient for wall of love section */
+.wall-gradient {
+  -webkit-backdrop-filter: blur(40px) brightness(100%);
+  backdrop-filter: blur(40px) brightness(100%);
+  background: conic-gradient(
+    from 30deg at 50% 40%,
+    rgb(255, 255, 255) 53.98deg,
+    #ffdda0,
+    /* #00a6ff, */ #ff6360,
+    #ff9ddc,
+    rgb(255, 255, 255) 302.02deg
+  );
+  background-color: rgb(255, 255, 255);
+  /* mix-blend-mode: hard-light; */
+  /* Other properties */
+  filter: blur(90px);
 }
