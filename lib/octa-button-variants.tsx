@@ -55,12 +55,6 @@ export const octaButtonVariants = [
     component: octaButtonComponents.default,
   },
   {
-    title: "Danger",
-    variant: "destructive",
-    component: octaButtonComponents.destructive,
-  },
-
-  {
     title: "Ghost",
     variant: "ghost",
     component: octaButtonComponents.ghost,

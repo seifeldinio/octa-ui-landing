@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Section from "@/components/ui/section";
 import { Separator } from "@/components/ui/separator";
 import { octaButtonVariants } from "@/lib/octa-button-variants";
-import { Check } from "lucide-react"; // Import the Check icon
+import { Check, Plus } from "lucide-react"; // Import the Check icon
 import { useState } from "react";
 
 const SectionTwo = () => {
@@ -52,6 +52,11 @@ const SectionTwo = () => {
                 <span>{item.title}</span>
               </Button>
             ))}
+            {/* More */}
+            <div className="flex items-center justify-center text-sm border  bg-[#e8e8e8] text-[#3e3e3e] rounded-full">
+              <Plus className="h-3 w-3 mr-1" />
+              <span>More</span>
+            </div>
           </div>
           <Button className="rounded-full" size={"lg"}>
             <img
