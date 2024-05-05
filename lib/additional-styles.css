@@ -1,0 +1,17 @@
+.hero-gradient {
+  -webkit-backdrop-filter: blur(40px) brightness(100%);
+  backdrop-filter: blur(40px) brightness(100%);
+  background: conic-gradient(
+    from 0deg at 50% 85%,
+    rgb(255, 255, 255) 53.98deg,
+    rgb(118.58, 174.08, 241.91) 77.99deg,
+    rgb(0, 231.35, 142.51) 131.97deg,
+    rgb(255, 214.2, 0) 224.65deg,
+    rgb(230.04, 0, 0) 265.24deg,
+    rgb(255, 255, 255) 302.02deg
+  );
+  background-color: rgb(255, 255, 255);
+  /* mix-blend-mode: hard-light; */
+  /* Other properties */
+  filter: blur(60px); /* Add blur effect */
+}
