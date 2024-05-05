@@ -1,76 +1,80 @@
 "use client";
-
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useEffect, useState } from "react";
 import Prism from "prismjs";
 import "prismjs/themes/prism.css";
+import { Button } from "@/components/ui/button";
+import { Check, Copy } from "lucide-react";
 
 const CodeSnippet = () => {
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
+
   const code = `import React from "react";
+import { Button, Input } from "@seifeldinio/octa-ui";
+import "@seifeldinio/octa-ui/dist/style.css";
 
-interface CardProps {
-  title: string;
-  description: string;
-}
-
-const Card: React.FC<CardProps> = ({ title, description }) => {
+const SignIn = () => {
   return (
-    <div className="flex flex-col items-start space-y-3 bg-white/50 backdrop-blur-md bg-opacity-20 backdrop-filter border h-auto w-full p-4 rounded-xl">
-      <h2 className="font-semibold text-lg tracking-tighter">{title}</h2>
-      <p className="text-sm text-[#5F5F5F]">{description}</p>
+    <div className="flex flex-col items-center">
+      <h1 className="font-bold mt-6">Sign in to Example</h1>
+      <p className="text-[#656565] mt-1 text-sm">
+        Welcome back! Please sign in to continue
+      </p>
+      <div className="flex flex-row items-center space-x-2 mt-7">
+        <Button variant={"outline"} className="w-[165px]">
+          <img src="/svg/google.svg" alt="Google" className="h-5 w-5 mr-2" />
+          <span>Google</span>
+        </Button>
+
+        <Button variant={"outline"} className="w-[165px]">
+          <img
+            src="/svg/github-dark.svg"
+            alt="Github"
+            className="h-5 w-5 mr-2 "
+          />
+          <span>GitHub</span>
+        </Button>
+      </div>
+      <div className="flex flex-row items-center space-x-3 mt-5 mb-6">
+        <hr className="w-[150px]" />
+        <span className="text-[#a7a7a7] text-sm">or</span>
+        <hr className="w-[150px]" />
+      </div>
+      <Input label="Email" className="w-[340px]" />
+      <Button variant={"materialSecondary"} className="mt-5 w-[340px]">
+        Continue
+      </Button>
     </div>
   );
 };
 
-export default Card;
-  `;
+export default SignIn;`;
 
-  React.useEffect(() => {
-    Prism.highlightAll();
-  }, []);
+  const handleCopy = () => {
+    navigator.clipboard.writeText(code);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000); // Reset copied state after 2 seconds
+  };
 
   return (
-    <pre className="w-[700px] h-[320px] bg-white rounded-xl">
-      <code className="language-javascript">{code}</code>
-    </pre>
+    <div className="relative">
+      <pre className="w-[620px] h-[370px] bg-white rounded-2xl">
+        <code className="language-javascript">{code}</code>
+      </pre>
+
+      <Button
+        onClick={handleCopy}
+        className="absolute right-4 top-3"
+        size={"icon"}
+        variant={"outline"}
+      >
+        {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+      </Button>
+    </div>
   );
 };
 
 export default CodeSnippet;
-
-// import React, { useEffect } from "react";
-// import Prism from "prismjs";
-// import "prismjs/themes/prism.css"; // Import the desired theme CSS
-// import "prismjs/components/prism-javascript"; // Import the JavaScript language syntax
-// import "prismjs/components/prism-css"; // Import other language syntaxes if needed
-
-// const CodeSnippet = () => {
-//   useEffect(() => {
-//     // Initialize Prism.js after component is mounted
-//     Prism.highlightAll();
-//   }, []);
-
-//   const code = `
-// import React from "react";
-
-// interface CardProps {
-//   title: string;
-//   description: string;
-// }
-
-// const Card: React.FC<CardProps> = ({ title, description }) => {
-//   return (
-//     <div className="flex flex-col items-start space-y-3 bg-white/50 backdrop-blur-md bg-opacity-20 backdrop-filter border h-auto w-full p-4 rounded-xl">
-//       <h2 className="font-semibold text-lg tracking-tighter">{title}</h2>
-//       <p className="text-sm text-[#5F5F5F]">{description}</p>
-//     </div>
-//   );
-// };
-
-// export default Card;
-//   `;
-
-//   return <code className="language-javascript">{code}</code>;
-// };
-
-// export default CodeSnippet;

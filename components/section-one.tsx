@@ -1,8 +1,9 @@
-import React from "react";
-import Section from "@/components/ui/section";
-import CodeSnippet from "@/components/ui/code-snippet";
 import { Button } from "@/components/ui/button";
+import CodeSnippet from "@/components/ui/code-snippet";
+import Section from "@/components/ui/section";
 import { Copy } from "lucide-react";
+
+import FormExample from "./ui/form-example";
 
 const SectionOne = () => {
   return (
@@ -12,7 +13,7 @@ const SectionOne = () => {
       customPaddings
       id="section-one"
     >
-      <div className="flex flex-row items-start w-full">
+      <div className="flex flex-row items-start w-full px-7">
         {/* Left */}
         <div className="w-full mr-auto">
           <h2 className="md:text-3xl font-semibold leading-tighter tracking-tighter mb-2">
@@ -22,8 +23,8 @@ const SectionOne = () => {
             With beautiful out of the box components.
           </p>
           {/* Code */}
-          <div className="bg-white rounded-xl shadow-sm border border-[#E9E9E9] w-full h-[400px]">
-            <div className="bg-[#FAFAFA] w-full rounded-tr-xl rounded-tl-xl px-4 py-4">
+          <div className="bg-white rounded-2xl shadow-sm border border-[#E9E9E9] w-full h-[460px]">
+            <div className="bg-[#FAFAFA] w-full rounded-tr-2xl rounded-tl-2xl px-4 py-4">
               <div className="flex flex-row items-center space-x-2">
                 <div className="bg-red-500 rounded-full h-2.5 w-2.5" />
                 <div className="bg-blue-500 rounded-full h-2.5 w-2.5" />
@@ -31,24 +32,14 @@ const SectionOne = () => {
               </div>
             </div>
             {/* Content */}
-            <div className="relative p-4">
-              {/* <code>const greeting = "Hello, world!";</code> */}
-              <Button
-                className="absolute right-8 top-10"
-                size={"icon"}
-                variant={"outline"}
-              >
-                <Copy className="h-4 w-4" />
-              </Button>
+            <div className="p-4">
               <CodeSnippet />
             </div>
           </div>
         </div>
         {/* Right */}
         <div className="ml-10">
-          <div className="bg-white rounded-xl shadow-lg border border-[#E9E9E9] h-[490px] w-[400px] p-4">
-            Example
-          </div>
+          <FormExample />
         </div>
       </div>
       <div className="h-[400px]"></div>

@@ -10,7 +10,7 @@ import {
   Button as OctaButton,
   Toggle as OctaToggle,
 } from "@seifeldinio/octa-ui";
-import "@seifeldinio/octa-ui/dist/style.css";
+
 import "@/lib/additional-styles.css";
 
 function Hero() {
