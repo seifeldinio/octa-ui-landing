@@ -2,16 +2,30 @@
 import Slider from "react-slick";
 import TestimonialCard from "@/components/ui/testimonial-card";
 import BrandedButton from "@/components/ui/branded-button";
+import { useGSAP } from "@gsap/react";
+import { animateWithGsap } from "@/lib/animation";
 
 const WallOfLove = () => {
   const settings = getSliderSettings(8000);
   const settings2 = getSliderSettings(12000);
 
+  useGSAP(() => {
+    animateWithGsap(".wall-title", { opacity: 1 });
+
+    animateWithGsap(
+      ".wall-of-love-animation",
+      { scale: 1, opacity: 1, delay: 0.2, duration: "0.8" }
+
+      // { scale: 1, opacity: 1, ease: "power1" }
+      // { scrub: 1 }
+    );
+  }, []);
+
   return (
-    <section className="relative">
+    <section className=" relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:pt-20">
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+          <div className="wall-title max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <div className="flex flex-row items-center justify-center content-center">
               <h2 className="font-bold text-4xl tracking-tighter mb-4">
                 Wall of Love
@@ -30,7 +44,7 @@ const WallOfLove = () => {
           </div>
 
           <div className="absolute z-20 h-[500px] overflow-clip overflow-y-hidden w-full">
-            <div className="flex flex-row justify-center content-center items-center space-x-4 md:px-5 px-0 md:max-w-6xl mx-auto w-full">
+            <div className="wall-of-love-animation flex flex-row justify-center content-center items-center space-x-4 md:px-5 px-0 md:max-w-6xl mx-auto w-full">
               <Slider className="w-auto" {...settings}>
                 <TestimonialCard
                   avatar={"OB."}

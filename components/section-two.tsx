@@ -7,6 +7,8 @@ import { octaButtonVariants } from "@/lib/octa-button-variants";
 import { Check, Plus } from "lucide-react"; // Import the Check icon
 import { useState } from "react";
 import BrandedButton from "@/components/ui/branded-button";
+import { useGSAP } from "@gsap/react";
+import { animateWithGsap } from "@/lib/animation";
 
 const SectionTwo = () => {
   const [selectedVariant, setSelectedVariant] = useState(
@@ -18,6 +20,15 @@ const SectionTwo = () => {
     (item) => item.variant === selectedVariant
   );
 
+  // GSAP
+  useGSAP(() => {
+    // animateWithGsap(".section-one-animation", { y: 0, opacity: 1 });
+    animateWithGsap(".section-two-title", { opacity: 1 });
+    animateWithGsap(".section-two-buttons", { opacity: 1, delay: 0.1 });
+    animateWithGsap(".section-two-render", { opacity: 1, delay: 0.2 });
+    // animateWithGsap(".section-one-animation", { y: 0, opacity: 1 });
+  }, []);
+
   return (
     <Section
       //   className="mt-[-3rem] "
@@ -25,19 +36,19 @@ const SectionTwo = () => {
       id="section-two"
     >
       <div className="flex flex-row items-start w-full px-7 ">
-        <div className="flex items-center justify-center bg-gradient-to-tr from-[#FF71DF] to-[#F74D7A] w-[660px] rounded-2xl h-[350px]">
+        <div className="section-two-render flex items-center justify-center bg-gradient-to-tr from-[#FF71DF] to-[#F74D7A] w-[660px] rounded-2xl h-[350px]">
           {/* Rendering the selected variant component */}
           {selectedVariantObject && selectedVariantObject.component}
         </div>
         <div className="flex flex-col items-start ml-[2.5rem]">
-          <h2 className="md:text-3xl font-semibold leading-tighter tracking-tighter mb-2">
+          <h2 className="section-two-title md:text-3xl font-semibold leading-tighter tracking-tighter mb-2">
             Many variants. 🙌
           </h2>
-          <p className="text-[#666666] mb-6 text-xl tracking-tighter">
+          <p className="section-two-title text-[#666666] mb-6 text-xl tracking-tighter">
             Select a variant to switch.{" "}
           </p>
           {/* Options to switch the variant */}
-          <div className="grid grid-cols-3 gap-7 mb-10">
+          <div className="section-two-buttons grid grid-cols-3 gap-7 mb-10">
             {octaButtonVariants.map((item, i) => (
               <Button
                 key={i}
@@ -59,7 +70,9 @@ const SectionTwo = () => {
               <span>More</span>
             </div>
           </div>
-          <BrandedButton />
+          <div className="section-two-buttons">
+            <BrandedButton />
+          </div>
         </div>
       </div>
 

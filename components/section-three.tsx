@@ -1,10 +1,23 @@
+"use client";
+
 import React from "react";
 import Section from "@/components/ui/section";
 import TechCard from "@/components/ui/tech-card";
 import ProductCard from "@/components/ui/product-card";
 import { Separator } from "@/components/ui/separator";
+// import { useGSAP } from "@gsap/react";
+// import { animateWithGsap } from "@/lib/animation";
 
 const SectionThree = () => {
+  // GSAP
+  // useGSAP(() => {
+  //   // animateWithGsap(".section-one-animation", { y: 0, opacity: 1 });
+  //   animateWithGsap(".section-three-animation", { opacity: 1 });
+  //   // animateWithGsap(".section-three-cards", { opacity: 1, delay: 0.1 });
+  //   // animateWithGsap(".section-three-render", { opacity: 1, delay: 0.2 });
+  //   // animateWithGsap(".section-one-animation", { y: 0, opacity: 1 });
+  // }, []);
+
   return (
     <Section className="mt-[-3rem] " customPaddings id="section-three">
       <div className="flex flex-row items-end w-full px-7 py-20 bg-white">

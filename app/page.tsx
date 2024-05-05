@@ -22,45 +22,21 @@ export default function Home() {
       </Head>
       <div className="flex flex-col min-h-screen overflow-hidden bg-[#FAFAFA] text-[#171717]">
         <Banner />
-
         {/*  Site header */}
         <Header />
         <Hero />
         {/*  Page content */}
         <main className="flex-grow max-w-6xl mx-auto border-r border-l">
-          {/* border-l border-r */}
-
           <FeaturesCards />
           <SectionOne />
           <SectionTwo />
           <SectionThree />
           <SectionFour />
           <WallOfLove />
-          {/* <Hero /> */}
-          {/* <Hero /> */}
-          {/*  Page sections */}
-          {/* <HeroHome /> */}
-          {/* <BrandsSlider /> */}
-
-          {/* <SectionOne /> */}
-          {/* <SectionTwo /> */}
-          {/* <SectionThree /> */}
-          {/* <SectionFour /> */}
-          {/* <SectionFive /> */}
-          {/* <SectionSix /> */}
-          {/* <SectionSeven /> */}
-          {/* <SectionNine /> */}
-          {/* <WallOfLove /> */}
-          {/* <LastSection /> */}
         </main>
 
-        {/*  Site footer */}
         <Footer />
       </div>
     </>
   );
 }
-
-// <main className="flex min-h-screen flex-col items-center justify-between p-24">
-//   <h1>Hello yaba</h1>
-// </main>
