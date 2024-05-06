@@ -1,5 +1,5 @@
 import React from "react";
-import { Button as OctaButton } from "@seifeldinio/octa-ui";
+import { Button as OctaButton } from "octa-ui";
 
 // Define the component definitions
 const octaButtonComponents = {

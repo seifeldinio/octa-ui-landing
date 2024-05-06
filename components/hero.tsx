@@ -7,7 +7,7 @@ import {
   Button as OctaButton,
   Input as OctaInput,
   Toggle as OctaToggle,
-} from "@seifeldinio/octa-ui";
+} from "octa-ui";
 import gsap from "gsap";
 import { ArrowRight, Settings } from "lucide-react";
 import { useRef } from "react";

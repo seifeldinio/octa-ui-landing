@@ -1,7 +1,7 @@
 import Banner from "@/components/banner";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-import "@seifeldinio/octa-ui/dist/style.css";
+import "octa-ui/dist/style.css";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 

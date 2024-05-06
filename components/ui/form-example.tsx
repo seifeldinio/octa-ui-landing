@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Separator } from "@/components/ui/separator";
-import { Input as OctaInput, Button as OctaButton } from "@seifeldinio/octa-ui";
+import { Input as OctaInput, Button as OctaButton } from "octa-ui";
 
 const FormExample = () => {
   return (

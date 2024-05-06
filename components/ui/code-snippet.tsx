@@ -13,8 +13,8 @@ const CodeSnippet = () => {
   }, []);
 
   const code = `import React from "react";
-import { Button, Input } from "@seifeldinio/octa-ui";
-import "@seifeldinio/octa-ui/dist/style.css";
+import { Button, Input } from "octa-ui";
+import "octa-ui/dist/style.css";
 
 const SignIn = () => {
   return (

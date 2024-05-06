@@ -1,6 +1,6 @@
 "use client";
 
-import { Button as OctaButton } from "@seifeldinio/octa-ui";
+import { Button as OctaButton } from "octa-ui";
 import { PackagePlus } from "lucide-react";
 import { useEffect } from "react";
 
