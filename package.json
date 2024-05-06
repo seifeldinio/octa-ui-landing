@@ -20,7 +20,7 @@
     "gsap": "^3.12.5",
     "lucide-react": "^0.378.0",
     "next": "14.2.3",
-    "octa-ui": "^0.0.26",
+    "octa-ui": "^1.0.0",
     "prismjs": "^1.29.0",
     "react": "^18",
     "react-dom": "^18",
