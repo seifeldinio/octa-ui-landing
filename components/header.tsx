@@ -54,12 +54,12 @@ function Header() {
 
                 <li>
                   <Button variant={"ghost"} className="hover:bg-transparent">
-                    Components
+                    Repo
                   </Button>
                 </li>
                 <li>
                   <Button variant={"ghost"} className="hover:bg-transparent">
-                    Contact
+                    Library
                   </Button>
                 </li>
               </ul>
