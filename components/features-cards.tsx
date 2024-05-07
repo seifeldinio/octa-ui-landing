@@ -38,7 +38,7 @@ const FeaturesCards = () => {
 
           <Card
             title="✨ Themeable"
-            description="Provides a plugin to customize default themes, you can change all semantic tokens or create an entire new theme."
+            description="Provides the ability to customize default themes, you can change all semantic tokens or create an entire new theme."
             className="card-animation-3"
           />
         </div>

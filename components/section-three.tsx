@@ -27,8 +27,8 @@ const SectionThree = () => {
             Customizable with classes.
           </h2>
           <p className="text-[#666666] mb-6 text-xl tracking-tighter">
-            Octa UI components are built on top of <br /> ensuring exceptional
-            accessibility support.
+            Octa UI components empowering you <br />
+            to customize with ease through intuitive classes.
           </p>
           {/* Cards */}
           <div className="flex flex-col items-start space-y-6">

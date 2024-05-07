@@ -15,10 +15,10 @@ const Footer = dynamic(() => import("@/components/footer"));
 export default function Home() {
   return (
     <>
-      <Head>
+      {/* <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="./favicon.ico" />
-      </Head>
+      </Head> */}
       <div className="flex flex-col min-h-screen overflow-hidden bg-[#FAFAFA] text-[#171717]">
         <Banner />
         {/*  Site header */}

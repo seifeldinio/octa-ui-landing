@@ -1,9 +1,13 @@
 "use client";
-import Slider from "react-slick";
-import TestimonialCard from "@/components/ui/testimonial-card";
+// import Slider from "react-slick";
 import BrandedButton from "@/components/ui/branded-button";
-import { useGSAP } from "@gsap/react";
+import TestimonialCard from "@/components/ui/testimonial-card";
 import { animateWithGsap } from "@/lib/animation";
+import { testimonials } from "@/lib/contants";
+import { useGSAP } from "@gsap/react";
+import dynamic from "next/dynamic";
+
+const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 const WallOfLove = () => {
   const settings = getSliderSettings(8000);
@@ -37,118 +41,53 @@ const WallOfLove = () => {
               />
             </div>
             <p className="text-sm tracking-tight text-[#5F5F5F]">
-              We stay close to our users and work with them daily to keep
-              improving the platform. Every brand on Bloxat Built continues to
-              grow and we support them every way we can.
+              We are deeply connected to our users, collaborating with them
+              daily to enhance Octa UI. Every brand leveraging Octa UI continues
+              to flourish, and we provide unwavering support every step of the
+              way.
             </p>
           </div>
 
           <div className="absolute z-20 md:pr-10 pr-0 md:pl-0 pl-5 h-[500px] overflow-clip overflow-y-hidden w-full">
             <div className="wall-of-love-animation flex flex-row justify-center items-center md:space-x-4 space-x-0 md:px-5 px-0 md:max-w-6xl md:mx-auto w-full ">
               <Slider className="md:w-auto w-full" {...settings}>
-                <TestimonialCard
-                  avatar={"OB."}
-                  name={"Odessa Brekke"}
-                  img={"https://media.publit.io/file/LandingPage/avatar2.webp"}
-                  text={
-                    "Very easy to use I am completely blown away. It really saved me months."
-                  }
-                />
-                <TestimonialCard
-                  avatar={"OB."}
-                  name={"Odessa Brekke"}
-                  img={"https://media.publit.io/file/LandingPage/avatar2.webp"}
-                  text={
-                    "Very easy to use I am completely blown away. It really saved me months."
-                  }
-                />
-                <TestimonialCard
-                  avatar={"OB."}
-                  name={"Odessa Brekke"}
-                  img={"https://media.publit.io/file/LandingPage/avatar2.webp"}
-                  text={
-                    "Very easy to use I am completely blown away. It really saved me months."
-                  }
-                />
-                <TestimonialCard
-                  avatar={"OB."}
-                  name={"Odessa Brekke"}
-                  img={"https://media.publit.io/file/LandingPage/avatar2.webp"}
-                  text={
-                    "Very easy to use I am completely blown away. It really saved me months."
-                  }
-                />
+                {testimonials.map((testimonial, index) => (
+                  <TestimonialCard
+                    key={index}
+                    avatar={testimonial.avatar}
+                    name={testimonial.name}
+                    img={testimonial.img}
+                    text={testimonial.text}
+                    bgColor={testimonial.bgColor}
+                  />
+                ))}
               </Slider>
               <Slider
                 className="md:flex hidden md:h-[900px] h-full"
                 {...settings2}
               >
-                <TestimonialCard
-                  avatar={"OB."}
-                  name={"Odessa Brekke"}
-                  img={"https://media.publit.io/file/LandingPage/avatar2.webp"}
-                  text={
-                    "Very easy to use I am completely blown away. It really saved me months."
-                  }
-                />
-                <TestimonialCard
-                  avatar={"OB."}
-                  name={"Odessa Brekke"}
-                  img={"https://media.publit.io/file/LandingPage/avatar2.webp"}
-                  text={
-                    "Very easy to use I am completely blown away. It really saved me months."
-                  }
-                />
-                <TestimonialCard
-                  avatar={"OB."}
-                  name={"Odessa Brekke"}
-                  img={"https://media.publit.io/file/LandingPage/avatar2.webp"}
-                  text={
-                    "Very easy to use I am completely blown away. It really saved me months."
-                  }
-                />
-                <TestimonialCard
-                  avatar={"OB."}
-                  name={"Odessa Brekke"}
-                  img={"https://media.publit.io/file/LandingPage/avatar2.webp"}
-                  text={
-                    "Very easy to use I am completely blown away. It really saved me months."
-                  }
-                />
+                {testimonials.reverse().map((testimonial, index) => (
+                  <TestimonialCard
+                    key={index}
+                    avatar={testimonial.avatar}
+                    name={testimonial.name}
+                    img={testimonial.img}
+                    text={testimonial.text}
+                    bgColor={testimonial.bgColor}
+                  />
+                ))}
               </Slider>
               <Slider className="md:flex hidden" {...settings}>
-                <TestimonialCard
-                  avatar={"OB."}
-                  name={"Odessa Brekke"}
-                  img={"https://media.publit.io/file/LandingPage/avatar2.webp"}
-                  text={
-                    "Very easy to use I am completely blown away. It really saved me months."
-                  }
-                />
-                <TestimonialCard
-                  avatar={"OB."}
-                  name={"Odessa Brekke"}
-                  img={"https://media.publit.io/file/LandingPage/avatar2.webp"}
-                  text={
-                    "Very easy to use I am completely blown away. It really saved me months."
-                  }
-                />
-                <TestimonialCard
-                  avatar={"OB."}
-                  name={"Odessa Brekke"}
-                  img={"https://media.publit.io/file/LandingPage/avatar2.webp"}
-                  text={
-                    "Very easy to use I am completely blown away. It really saved me months."
-                  }
-                />
-                <TestimonialCard
-                  avatar={"OB."}
-                  name={"Odessa Brekke"}
-                  img={"https://media.publit.io/file/LandingPage/avatar2.webp"}
-                  text={
-                    "Very easy to use I am completely blown away. It really saved me months."
-                  }
-                />
+                {testimonials.map((testimonial, index) => (
+                  <TestimonialCard
+                    key={index}
+                    avatar={testimonial.avatar}
+                    name={testimonial.name}
+                    img={testimonial.img}
+                    text={testimonial.text}
+                    bgColor={testimonial.bgColor}
+                  />
+                ))}
               </Slider>
             </div>
           </div>
