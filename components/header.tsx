@@ -69,14 +69,22 @@ function Header() {
                 </li>
 
                 <li>
-                  <Button variant={"ghost"} className="hover:bg-transparent">
-                    Repo
-                  </Button>
+                  <Link
+                    href={"https://github.com/seifeldinio/octa-ui"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant={"ghost"} className="hover:bg-transparent">
+                      Repo
+                    </Button>
+                  </Link>
                 </li>
                 <li>
-                  <Button variant={"ghost"} className="hover:bg-transparent">
-                    Library
-                  </Button>
+                  <Link href={"mailto:hello@seifradwane.com"}>
+                    <Button variant={"ghost"} className="hover:bg-transparent">
+                      Contact
+                    </Button>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -84,10 +92,22 @@ function Header() {
             <nav className="md:flex hidden flex-grow">
               <ul className="flex flex-grow justify-end flex-wrap items-center space-x-3">
                 <li>
-                  <Button variant={"outline"}>Docs</Button>
+                  <Link
+                    href={"https://docs.octaui.com/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant={"outline"}>Docs</Button>
+                  </Link>
                 </li>
                 <li>
-                  <Button>Get Started</Button>
+                  <Link
+                    href={"https://www.npmjs.com/package/octa-ui"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button>Get Started</Button>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -108,14 +128,18 @@ function Header() {
               className="md:hidden flex flex-col items-center justify-center content-center pb-2 pt-2 px-1"
             >
               <Link
-                href={"/"}
+                href={"https://docs.octaui.com/"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2.5 p-3 rounded-lg text-md m-2 content-center justify-center transition-color duration-200 border-[1.5px] border-[#5d5d5d] w-full"
               >
                 <Triangle className="h-[15px] w-[15px] " />{" "}
                 <span className="text-[18px] font-normal text-sm">Docs</span>
               </Link>
               <Link
-                href={"/"}
+                href={"https://www.npmjs.com/package/octa-ui"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2.5 p-3 rounded-lg text-md m-2 content-center justify-center transition-color duration-200 border-[1.5px] border-[#000000] bg-[#171717] text-white w-full"
               >
                 <span className="text-[18px] font-normal text-sm">

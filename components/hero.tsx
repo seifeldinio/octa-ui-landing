@@ -11,6 +11,7 @@ import { ScrollParallax } from "react-just-parallax";
 
 import FloatingComponents from "@/components/ui/floating-components";
 import "@/lib/additional-styles.css";
+import Link from "next/link";
 
 function Hero() {
   // PARALLAX
@@ -61,17 +62,33 @@ function Hero() {
           </span>
 
           <div className="flex flex-row items-center space-x-3 z-20">
-            <Button className="rounded-full h-12 px-7 font-semibold space-x-2">
-              <img src="/svg/github.svg" alt="Github" className="h-5 w-auto" />
-              <span>Github</span>
-            </Button>
-            <Button
-              variant={"outline"}
-              className="rounded-full h-12 px-7 font-semibold space-x-2"
+            <Link
+              href={"https://github.com/seifeldinio/octa-ui"}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span> Get Started</span>
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+              <Button className="rounded-full h-12 px-7 font-semibold space-x-2">
+                <img
+                  src="/svg/github.svg"
+                  alt="Github"
+                  className="h-5 w-auto"
+                />
+                <span>Github</span>
+              </Button>
+            </Link>
+            <Link
+              href={"https://www.npmjs.com/package/octa-ui"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant={"outline"}
+                className="rounded-full h-12 px-7 font-semibold space-x-2"
+              >
+                <span> Get Started</span>
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </div>
 
           {/* FLOATING COMPONENTS */}

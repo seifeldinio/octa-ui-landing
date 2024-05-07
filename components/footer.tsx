@@ -58,22 +58,22 @@ const Footer: React.FC = () => {
               <ul className="text-[#666666] text-sm tracking-tight">
                 <li className="mb-4">
                   <a
-                    href=""
+                    href="https://docs.octaui.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline"
                   >
-                    Documentation
+                    Docs
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://tailwindcss.com/docs/guides/nextjs"
+                    href="https://www.npmjs.com/package/octa-ui"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline"
                   >
-                    Tailwind CSS
+                    Library
                   </a>
                 </li>
               </ul>
