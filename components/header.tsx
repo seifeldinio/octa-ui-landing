@@ -48,7 +48,7 @@ function Header() {
         className={cn(
           "fixed w-full z-30 bg-opacity-80 transition duration-300 ease-in-out mt-9",
           !top && "backdrop-blur-md shadow-sm mt-0",
-          openNav && "bg-white"
+          openNav && "bg-white bg-opacity-100 shadow-2xl"
         )}
       >
         <div className="max-w-6xl mx-auto px-5 sm:px-6">
@@ -105,7 +105,7 @@ function Header() {
           {openNav && (
             <nav
               ref={mobileMenuRef}
-              className="md:hidden flex flex-col items-center justify-center content-center pb-2 pt-2 px-1 shadow-md"
+              className="md:hidden flex flex-col items-center justify-center content-center pb-2 pt-2 px-1"
             >
               <Link
                 href={"/"}
