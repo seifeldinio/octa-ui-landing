@@ -22,8 +22,8 @@ const FeaturesCards = () => {
       customPaddings
       id="features-cards"
     >
-      <div className="relative max-w-6xl mx-auto px-7 bg-transparent">
-        <div className="flex flex-row items-center justify-center w-full space-x-10">
+      <div className="relative max-w-6xl mx-auto px-7 bg-transparent ">
+        <div className="flex md:flex-row flex-col items-center justify-center w-full md:space-x-10 space-x-0 md:space-y-0 space-y-5">
           <Card
             title="⚡ Fast"
             description="Built on top of Tailwind CSS, which means no runtime styles, and no unnecessary classes in your bundle."

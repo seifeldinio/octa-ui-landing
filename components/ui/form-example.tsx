@@ -6,8 +6,8 @@ import { Input as OctaInput, Button as OctaButton } from "octa-ui";
 
 const FormExample = () => {
   return (
-    <div className="relative flex flex-col items-center pt-10 bg-[#F7F7F8] rounded-2xl shadow-lg hover:shadow-xl border border-[#E9E9E9] h-[550px] w-[400px] transition-all duration-150 ease-in-out">
-      <div className="absolute top-0 flex flex-col items-center pt-10 bg-white rounded-2xl shadow-sm h-[440px] w-[400px]">
+    <div className="relative flex flex-col items-center pt-10 bg-[#F7F7F8] rounded-2xl shadow-lg hover:shadow-xl border border-[#E9E9E9] h-[550px] md:w-[400px] w-full transition-all duration-150 ease-in-out">
+      <div className="absolute top-0 flex flex-col items-center pt-10 pl-4 pr-4 bg-white rounded-2xl shadow-sm h-[440px] md:w-[400px] w-full">
         <div className="bg-gradient-to-b from-[#515151] to-[#171717] border border-[#171717] p-2 rounded-xl">
           <img
             src="/logo/logo-light.webp"
@@ -20,12 +20,12 @@ const FormExample = () => {
           Welcome back! Please sign in to continue
         </p>
         <div className="flex flex-row items-center space-x-2 mt-7">
-          <OctaButton variant={"outline"} className="w-[165px]">
+          <OctaButton variant={"outline"} className="md:w-[165px] w-full">
             <img src="/svg/google.svg" alt="Google" className="h-5 w-5 mr-2" />
             <span>Google</span>
           </OctaButton>
 
-          <OctaButton variant={"outline"} className="w-[165px]">
+          <OctaButton variant={"outline"} className="md:w-[165px] w-full">
             <img
               src="/svg/github-dark.svg"
               alt="Github"
@@ -35,13 +35,13 @@ const FormExample = () => {
           </OctaButton>
         </div>
         <div className="flex flex-row items-center space-x-3 mt-5 mb-6">
-          <Separator className="w-[150px]" />
+          <Separator className="md:w-[150px] w-[120px]" />
           <span className="text-[#a7a7a7] text-sm">or</span>
-          <Separator className="w-[150px]" />
+          <Separator className="md:w-[150px] w-[120px]" />
           {/* className="w-full"  */}
         </div>
-        <OctaInput label="Email" className="w-[340px]" />{" "}
-        <OctaButton variant={"materialSecondary"} className="mt-5 w-[340px]">
+        <OctaInput label="Email" className="md:w-[340px] w-full" />{" "}
+        <OctaButton variant={"materialSecondary"} className="mt-5 md:w-[340px] w-full">
           Continue
         </OctaButton>
       </div>

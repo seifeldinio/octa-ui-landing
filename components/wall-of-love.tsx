@@ -22,10 +22,10 @@ const WallOfLove = () => {
   }, []);
 
   return (
-    <section className=" relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section className="relative">
+      <div className="md:max-w-6xl md:mx-auto px-4 sm:px-6">
         <div className="py-12 md:pt-20">
-          <div className="wall-title max-w-3xl mx-auto text-center pb-12 md:pb-16">
+          <div className="wall-title md:max-w-3xl md:mx-auto text-center pb-12 md:pb-16">
             <div className="flex flex-row items-center justify-center content-center">
               <h2 className="font-bold text-4xl tracking-tighter mb-4">
                 Wall of Love
@@ -43,9 +43,9 @@ const WallOfLove = () => {
             </p>
           </div>
 
-          <div className="absolute z-20 h-[500px] overflow-clip overflow-y-hidden w-full">
-            <div className="wall-of-love-animation flex flex-row justify-center content-center items-center space-x-4 md:px-5 px-0 md:max-w-6xl mx-auto w-full">
-              <Slider className="w-auto" {...settings}>
+          <div className="absolute z-20 md:pr-10 pr-0 md:pl-0 pl-5 h-[500px] overflow-clip overflow-y-hidden w-full">
+            <div className="wall-of-love-animation flex flex-row justify-center items-center md:space-x-4 space-x-0 md:px-5 px-0 md:max-w-6xl md:mx-auto w-full ">
+              <Slider className="md:w-auto w-full" {...settings}>
                 <TestimonialCard
                   avatar={"OB."}
                   name={"Odessa Brekke"}
@@ -79,7 +79,10 @@ const WallOfLove = () => {
                   }
                 />
               </Slider>
-              <Slider className="md:flex md:h-[900px] h-full" {...settings2}>
+              <Slider
+                className="md:flex hidden md:h-[900px] h-full"
+                {...settings2}
+              >
                 <TestimonialCard
                   avatar={"OB."}
                   name={"Odessa Brekke"}
@@ -113,7 +116,7 @@ const WallOfLove = () => {
                   }
                 />
               </Slider>
-              <Slider className="md:flex " {...settings}>
+              <Slider className="md:flex hidden" {...settings}>
                 <TestimonialCard
                   avatar={"OB."}
                   name={"Odessa Brekke"}

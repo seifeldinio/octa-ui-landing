@@ -20,10 +20,10 @@ const SectionThree = () => {
 
   return (
     <Section className="mt-[-3rem] " customPaddings id="section-three">
-      <div className="flex flex-row items-end w-full px-7 py-20 bg-white">
+      <div className="flex md:flex-row flex-col md:items-end items-center w-full md:px-7 px-4 py-20 bg-white">
         {/* Left */}
-        <div className="flex flex-col items-start mr-auto">
-          <h2 className="md:text-3xl font-semibold leading-tighter tracking-tighter mb-2">
+        <div className="flex flex-col items-start md:mr-auto">
+          <h2 className="text-3xl font-semibold leading-tighter tracking-tighter mb-2">
             Customizable with classes.
           </h2>
           <p className="text-[#666666] mb-6 text-xl tracking-tighter">
@@ -48,7 +48,7 @@ const SectionThree = () => {
           </div>
         </div>
         {/* Right */}
-        <div className="flex items-center justify-center bg-gradient-to-t from-[#FFF16B] to-[#FFF7A9] w-[590px] rounded-2xl h-[315px] ">
+        <div className="flex items-center justify-center bg-gradient-to-t from-[#FFF16B] to-[#FFF7A9] md:w-[590px] w-full rounded-2xl h-[315px] md:mt-0 mt-6">
           <ProductCard />
         </div>
       </div>

@@ -61,7 +61,7 @@ export default SignIn;`;
 
   return (
     <div className="relative">
-      <pre className="w-[620px] h-[370px] bg-white rounded-2xl">
+      <pre className="md:w-[620px] w-full md:h-[370px] h-[190px] bg-white rounded-2xl">
         <code className="language-javascript">{code}</code>
       </pre>
 

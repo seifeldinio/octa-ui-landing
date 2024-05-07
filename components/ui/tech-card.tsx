@@ -16,7 +16,7 @@ const TechCard: React.FC<TechCardProps> = ({
   alt,
 }) => {
   return (
-    <div className="flex flex-col  items-start border shadow-md hover:shadow-xl transition-all duration-150 ease-in-out  p-7 rounded-xl w-[470px]">
+    <div className="flex flex-col  items-start border shadow-md hover:shadow-xl transition-all duration-150 ease-in-out  p-7 rounded-xl md:w-[470px] w-full">
       <div className="flex flex-row items-center space-x-2 mb-5">
         <img src={imageSrc} alt={alt} />
         <h3 className="font-semibold tracking-tight">{title}</h3>

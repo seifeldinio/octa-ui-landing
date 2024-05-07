@@ -25,7 +25,7 @@ export default function Home() {
         <Header />
         <Hero />
         {/*  Page content */}
-        <main className="flex-grow max-w-6xl mx-auto border-r border-l">
+        <main className="md:flex-grow md:max-w-6xl md:mx-auto md:border-r md:border-l">
           <FeaturesCards />
           <SectionOne />
           <SectionTwo />

@@ -35,13 +35,13 @@ const SectionTwo = () => {
       customPaddings
       id="section-two"
     >
-      <div className="flex flex-row items-start w-full px-7 ">
-        <div className="section-two-render flex items-center justify-center bg-gradient-to-tr from-[#FF71DF] to-[#F74D7A] w-[660px] rounded-2xl h-[350px]">
+      <div className="flex md:flex-row flex-col md:items-start items-center w-full md:px-7 px-4">
+        <div className="section-two-render flex items-center justify-center bg-gradient-to-tr from-[#FF71DF] to-[#F74D7A] md:w-[660px] w-full rounded-2xl md:h-[350px] h-[200px]">
           {/* Rendering the selected variant component */}
           {selectedVariantObject && selectedVariantObject.component}
         </div>
-        <div className="flex flex-col items-start ml-[2.5rem]">
-          <h2 className="section-two-title md:text-3xl font-semibold leading-tighter tracking-tighter mb-2">
+        <div className="flex flex-col items-start md:ml-[2.5rem] ml-0 md:mt-0 mt-6">
+          <h2 className="section-two-title text-3xl font-semibold leading-tighter tracking-tighter mb-2">
             Many variants. 🙌
           </h2>
           <p className="section-two-title text-[#666666] mb-6 text-xl tracking-tighter">

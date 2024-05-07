@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
               Seif Radwane
             </span>
           </div>
-          <div className="flex mt-0 sm:justify-center space-x-4">
+          <div className="flex md:mt-0 mt-7 sm:justify-center space-x-4">
             <a
               href="https://github.com/seifeldinio"
               className="opacity-60 hover:opacity-100 transition-all duration-150 ease-in-out"
