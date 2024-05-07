@@ -1,15 +1,37 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-// import { Button } from "@seifeldinio/octa-ui";
-// import "@seifeldinio/octa-ui/dist/style.css";
-// import { Logo } from "../public/logo/logo.webp";
+import MenuSvg from "@/public/svg/menu-svg";
+import { Triangle } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 function Header() {
   const [top, setTop] = useState(true);
+  const [openNav, setOpenNav] = useState<boolean>(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        !mobileMenuRef.current?.contains(event.target as Node) &&
+        !(event.target as HTMLElement).closest(".menu-button")
+      ) {
+        setOpenNav(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const toggleNav = () => {
+    setOpenNav((prevOpenNav) => !prevOpenNav);
+  };
 
   // detect whether user has scrolled the page down by 10px
   useEffect(() => {
@@ -25,29 +47,23 @@ function Header() {
       <header
         className={cn(
           "fixed w-full z-30 bg-opacity-80 transition duration-300 ease-in-out mt-9",
-          !top && "backdrop-blur-md shadow-sm mt-0"
-          //  border-b
+          !top && "backdrop-blur-md shadow-sm mt-0",
+          openNav && "bg-white"
         )}
       >
         <div className="max-w-6xl mx-auto px-5 sm:px-6">
           <div className="flex items-center justify-between h-16 md:h-16">
-            {/* Site branding */}
-
             <nav>
               <ul className="flex flex-row items-center space-x-3">
                 <li>
-                  {" "}
                   <div className="flex-shrink-0 mr-2">
-                    {/* Logo */}
                     <Link href="/">
-                      <>
-                        <img
-                          src="/logo/logo.webp"
-                          className="md:h-[46px] h-[28px] w-auto"
-                          alt=""
-                          loading="lazy"
-                        />
-                      </>
+                      <img
+                        src="/logo/logo.webp"
+                        className="h-[46px] w-auto"
+                        alt=""
+                        loading="lazy"
+                      />
                     </Link>
                   </div>
                 </li>
@@ -65,42 +81,51 @@ function Header() {
               </ul>
             </nav>
 
-            {/* Site navigation */}
-            <nav className="flex flex-grow">
-              <ul className="flex flex-grow justify-end flex-wrap items-center space-x-3 ">
+            <nav className="md:flex hidden flex-grow">
+              <ul className="flex flex-grow justify-end flex-wrap items-center space-x-3">
                 <li>
                   <Button variant={"outline"}>Docs</Button>
-                  {/* <Link href="/login">
-                    <button
-                      className={
-                        !top
-                          ? "font-medium text-black hover:text-[#2b2b2b] px-5 py-3 flex items-center transition duration-150 ease-in-out cursor-pointer md:text-[16px] text-[14px]"
-                          : "font-medium text-white hover:text-[#e4e4e4] px-5 py-3 flex items-center transition duration-150 ease-in-out cursor-pointer md:text-[16px] text-[14px]"
-                      }
-                    >
-                      Login
-                    </button>
-                  </Link> */}
                 </li>
                 <li>
-                  {/* <Link href="https://demo.bloxat.app/" target="_blank">
-                    <button
-                      className={
-                        !top
-                          ? "btn-sm text-white outline outline-1 outline-black font-normal bg-black ml-3 cursor-pointer hover:bg-[#292929]  md:text-[16px] text-[14px]"
-                          : "btn-sm text-lemon outline outline-1 font-normal outline-lemon ml-3 cursor-pointer hover:bg-lemon hover:text-black md:text-[16px] text-[14px]"
-                      }
-                    >
-                      <span>Try Demo</span>
-                    </button>
-                  </Link> */}
                   <Button>Get Started</Button>
                 </li>
               </ul>
             </nav>
+
+            <Button
+              className="ml-auto md:hidden hover:bg-transparent bg-transparent menu-button"
+              size={"icon"}
+              variant={"ghost"}
+              onClick={toggleNav}
+            >
+              <MenuSvg openNavigation={openNav} />
+            </Button>
           </div>
+
+          {openNav && (
+            <nav
+              ref={mobileMenuRef}
+              className="md:hidden flex flex-col items-center justify-center content-center pb-2 pt-2 px-1 shadow-md"
+            >
+              <Link
+                href={"/"}
+                className="flex items-center gap-2.5 p-3 rounded-lg text-md m-2 content-center justify-center transition-color duration-200 border-[1.5px] border-[#5d5d5d] w-full"
+              >
+                <Triangle className="h-[15px] w-[15px] " />{" "}
+                <span className="text-[18px] font-normal text-sm">Docs</span>
+              </Link>
+              <Link
+                href={"/"}
+                className="flex items-center gap-2.5 p-3 rounded-lg text-md m-2 content-center justify-center transition-color duration-200 border-[1.5px] border-[#000000] bg-[#171717] text-white w-full"
+              >
+                <span className="text-[18px] font-normal text-sm">
+                  Get Started
+                </span>
+              </Link>
+            </nav>
+          )}
         </div>
-      </header>{" "}
+      </header>
     </>
   );
 }
