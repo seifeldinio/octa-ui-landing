@@ -33,7 +33,7 @@ function Hero() {
     >
       <div
         ref={parallaxRef}
-        className="container md:pt-40 pt-24 pb-[14rem] relative md:max-w-6xl mx-auto"
+        className="container md:pt-40 pt-24 md:pb-[14rem] pb-[10rem] relative md:max-w-6xl mx-auto"
       >
         {/* py-40 */}
         {/* Gradient overlay */}
