@@ -9,8 +9,8 @@ import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 
-import "@/lib/additional-styles.css";
 import FloatingComponents from "@/components/ui/floating-components";
+import "@/lib/additional-styles.css";
 
 function Hero() {
   // PARALLAX
@@ -24,7 +24,7 @@ function Hero() {
   return (
     <Section
       // className="pt-[12rem] "
-      className="pt-[9rem]"
+      className="md:pt-[9rem] pt-[7rem]"
       // -mt-[5.25rem]
       // crosses
       // crossesOffset="lg:translate-y-[5.25rem]"
@@ -33,7 +33,7 @@ function Hero() {
     >
       <div
         ref={parallaxRef}
-        className="container pt-40 pb-[14rem] relative max-w-6xl mx-auto"
+        className="container md:pt-40 pt-24 pb-[14rem] relative md:max-w-6xl mx-auto"
       >
         {/* py-40 */}
         {/* Gradient overlay */}
@@ -52,7 +52,7 @@ function Hero() {
         <div className="flex flex-col items-center justify-center relative z-1 max-w-[62rem] mx-auto text-center  mb-[4rem] md:mb-20 lg:mb:[6rem] ">
           <h1
             // className="h1 mb-6"
-            className="text-[40px] md:text-4xl font-semibold leading-tighter tracking-tighter mb-6"
+            className="text-4xl font-semibold leading-tighter tracking-tighter mb-6"
           >
             Make beautiful websites regardless <br /> of your design experience.
           </h1>

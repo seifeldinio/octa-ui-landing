@@ -7,7 +7,7 @@ import {
 
 const FloatingComponents = () => {
   return (
-    <div>
+    <div className="md:flex hidden">
       <div className="absolute -left-[0.5rem] bottom-[9.5rem] px-1 py-1 ">
         <OctaButton variant={"material"}>Label</OctaButton>
       </div>
